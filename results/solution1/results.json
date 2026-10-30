@@ -1,0 +1,80 @@
+{
+  "solution": "solution1",
+  "title": "K-means segmentation + Bayes",
+  "main_method": "Gaussian Bayes, full covariance, MAP rule",
+  "class_names": [
+    "Tomato___Bacterial_spot",
+    "Tomato___Early_blight",
+    "Tomato___healthy",
+    "Tomato___Late_blight",
+    "Tomato___Leaf_Mold",
+    "Tomato___Septoria_leaf_spot",
+    "Tomato___Spider_mites Two-spotted_spider_mite",
+    "Tomato___Target_Spot",
+    "Tomato___Tomato_mosaic_virus",
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus"
+  ],
+  "n_train": 3178,
+  "n_test": 795,
+  "n_features": 23,
+  "metrics": {
+    "accuracy": 0.5761006289308176,
+    "precision_macro": 0.6245815723089864,
+    "recall_macro": 0.5780000000000001,
+    "f1_macro": 0.5691182044843719,
+    "roc_auc_macro": 0.9140707912457913,
+    "miss_rate": 0.02097902097902098
+  },
+  "variants": {
+    "naive_bayes": {
+      "accuracy": 0.43018867924528303,
+      "precision_macro": 0.49861505845036846,
+      "recall_macro": 0.4325833333333334,
+      "f1_macro": 0.4206842136711521,
+      "roc_auc_macro": 0.8354094211344212,
+      "miss_rate": 0.025174825174825177
+    },
+    "min_risk": {
+      "accuracy": 0.5773584905660377,
+      "precision_macro": 0.6325700243278302,
+      "recall_macro": 0.5792499999999999,
+      "f1_macro": 0.5696589220845055,
+      "roc_auc_macro": 0.9140707912457913,
+      "miss_rate": 0.011188811188811189
+    }
+  },
+  "train_time_s": 0.01616048812866211,
+  "feature_ms_per_image": 53.799003010098595,
+  "predict_ms_per_image": 53.799003010098595,
+  "robustness": {
+    "gaussian_noise": {
+      "accuracy": 0.20125786163522014,
+      "precision_macro": 0.09943882342808631,
+      "recall_macro": 0.2,
+      "f1_macro": 0.10131148144234295,
+      "miss_rate": 0.004195804195804196
+    },
+    "blur": {
+      "accuracy": 0.49433962264150944,
+      "precision_macro": 0.5556481143464966,
+      "recall_macro": 0.4965833333333333,
+      "f1_macro": 0.4810210099027823,
+      "miss_rate": 0.016783216783216783
+    },
+    "dark": {
+      "accuracy": 0.2943396226415094,
+      "precision_macro": 0.39457214229696014,
+      "recall_macro": 0.2945,
+      "f1_macro": 0.29913299797571385,
+      "miss_rate": 0.013986013986013986
+    },
+    "bright": {
+      "accuracy": 0.43522012578616354,
+      "precision_macro": 0.5403422857071594,
+      "recall_macro": 0.4344166666666666,
+      "f1_macro": 0.4311190754188502,
+      "miss_rate": 0.027972027972027972
+    }
+  },
+  "field": null
+}

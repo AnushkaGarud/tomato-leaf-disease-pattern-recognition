@@ -1,0 +1,5 @@
+| Solution | Method | Accuracy | Precision | Recall | F1 score | ROC-AUC | Miss rate | Train time (s) | Inference (ms/img) | Acc. gaussian_noise | Acc. blur | Acc. dark | Acc. bright | Acc. field |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| S1: K-means segmentation + Bayes | Gaussian Bayes, full covariance, MAP rule | 0.5761 | 0.6246 | 0.5780 | 0.5691 | 0.9141 | 0.0210 | 0.02 | 53.80 | 0.2013 | 0.4943 | 0.2943 | 0.4352 |  |
+| S2: Fisher score + PCA/LDA + kNN/SVM | PCA + SVM | 0.8214 | 0.8227 | 0.8222 | 0.8214 | 0.9838 | 0.0140 | 2.36 | 57.96 | 0.1006 | 0.1006 | 0.3874 | 0.5887 |  |
+| S3: Neural network (MLP, backprop) | MLP 90-128-64-10, SGD + momentum, backpropagation | 0.8252 | 0.8272 | 0.8258 | 0.8262 | 0.9834 | 0.0098 | 1.30 | 57.75 | 0.1660 | 0.2365 | 0.4792 | 0.4415 |  |

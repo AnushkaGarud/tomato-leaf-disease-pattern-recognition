@@ -1,0 +1,74 @@
+{
+  "solution": "solution3",
+  "title": "Neural network (MLP, backprop)",
+  "main_method": "MLP 90-128-64-10, SGD + momentum, backpropagation",
+  "class_names": [
+    "Tomato___Bacterial_spot",
+    "Tomato___Early_blight",
+    "Tomato___healthy",
+    "Tomato___Late_blight",
+    "Tomato___Leaf_Mold",
+    "Tomato___Septoria_leaf_spot",
+    "Tomato___Spider_mites Two-spotted_spider_mite",
+    "Tomato___Target_Spot",
+    "Tomato___Tomato_mosaic_virus",
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus"
+  ],
+  "n_train": 3178,
+  "n_test": 795,
+  "n_features": 90,
+  "metrics": {
+    "accuracy": 0.8251572327044026,
+    "precision_macro": 0.8271657321352442,
+    "recall_macro": 0.8258333333333333,
+    "f1_macro": 0.8262324871637015,
+    "roc_auc_macro": 0.9834102434602434,
+    "miss_rate": 0.009790209790209791
+  },
+  "variants": {
+    "perceptron": {
+      "accuracy": 0.8088050314465409,
+      "precision_macro": 0.8097292387344215,
+      "recall_macro": 0.8094166666666667,
+      "f1_macro": 0.8088233682601453,
+      "roc_auc_macro": 0.9717252007252007,
+      "miss_rate": 0.015384615384615385
+    }
+  },
+  "best_epoch": 9,
+  "train_time_s": 1.301426649093628,
+  "feature_ms_per_image": 57.738205482219826,
+  "predict_ms_per_image": 57.74545220743418,
+  "robustness": {
+    "gaussian_noise": {
+      "accuracy": 0.1660377358490566,
+      "precision_macro": 0.05997703050108363,
+      "recall_macro": 0.16508333333333333,
+      "f1_macro": 0.07246958813507981,
+      "miss_rate": 0.4083916083916084
+    },
+    "blur": {
+      "accuracy": 0.23647798742138365,
+      "precision_macro": 0.4751855886049435,
+      "recall_macro": 0.23499999999999996,
+      "f1_macro": 0.16783014417935688,
+      "miss_rate": 0.0
+    },
+    "dark": {
+      "accuracy": 0.47924528301886793,
+      "precision_macro": 0.6146901792785896,
+      "recall_macro": 0.47700000000000004,
+      "f1_macro": 0.4795688948212827,
+      "miss_rate": 0.005594405594405594
+    },
+    "bright": {
+      "accuracy": 0.44150943396226416,
+      "precision_macro": 0.6218369465594817,
+      "recall_macro": 0.442,
+      "f1_macro": 0.4517685091167782,
+      "miss_rate": 0.015384615384615385
+    }
+  },
+  "field": null,
+  "cnn": null
+}

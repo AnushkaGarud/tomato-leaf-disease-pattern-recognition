@@ -1,0 +1,9 @@
+Copy the tomato class folders of PlantVillage here, so the layout is:
+
+    data/tomato/Tomato___healthy/...
+    data/tomato/Tomato___Early_blight/...
+    ...
+
+Optional field photos (same folder names) go in data/tomato_field/.
+For a quick smoke test without downloading anything run:
+    python scripts/make_synthetic_data.py

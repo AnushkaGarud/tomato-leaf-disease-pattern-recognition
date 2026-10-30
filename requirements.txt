@@ -1,0 +1,12 @@
+# Core (needed for all three solutions)
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3
+scikit-image>=0.21
+matplotlib>=3.7
+Pillow>=9.5
+
+# Optional: only for the CNN benchmark in Solution 3 (python run_solution3.py --cnn)
+# Keras 3 needs ONE backend; TensorFlow is the default.
+# keras>=3.0
+# tensorflow>=2.16        # or: torch   /   jax[cpu]  (then set KERAS_BACKEND=torch or jax)

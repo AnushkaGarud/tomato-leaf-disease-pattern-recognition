@@ -1,0 +1,122 @@
+{
+  "solution": "solution2",
+  "title": "Fisher score + PCA/LDA + kNN/SVM",
+  "main_method": "PCA + SVM",
+  "class_names": [
+    "Tomato___Bacterial_spot",
+    "Tomato___Early_blight",
+    "Tomato___healthy",
+    "Tomato___Late_blight",
+    "Tomato___Leaf_Mold",
+    "Tomato___Septoria_leaf_spot",
+    "Tomato___Spider_mites Two-spotted_spider_mite",
+    "Tomato___Target_Spot",
+    "Tomato___Tomato_mosaic_virus",
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus"
+  ],
+  "n_train": 3178,
+  "n_test": 795,
+  "n_features": 90,
+  "n_selected_features": 60,
+  "metrics": {
+    "accuracy": 0.8213836477987422,
+    "precision_macro": 0.8226948388484988,
+    "recall_macro": 0.8221666666666666,
+    "f1_macro": 0.8214484162274175,
+    "roc_auc_macro": 0.9837996891996893,
+    "miss_rate": 0.013986013986013986
+  },
+  "cv_model_selection": {
+    "PCA + kNN": {
+      "mean": 0.7523552716287822,
+      "std": 0.010091651994540454
+    },
+    "LDA + kNN": {
+      "mean": 0.777534789283415,
+      "std": 0.011064591580996123
+    },
+    "PCA + LDA + kNN": {
+      "mean": 0.7375664834348536,
+      "std": 0.008124899631818078
+    },
+    "PCA + SVM": {
+      "mean": 0.8178116178873868,
+      "std": 0.018085894823075353
+    },
+    "LDA + SVM": {
+      "mean": 0.797673451195959,
+      "std": 0.008659268068350412
+    }
+  },
+  "variants": {
+    "PCA + kNN": {
+      "accuracy": 0.7786163522012579,
+      "precision_macro": 0.7803965449955446,
+      "recall_macro": 0.7797499999999999,
+      "f1_macro": 0.7780639301271357,
+      "miss_rate": 0.006993006993006993
+    },
+    "LDA + kNN": {
+      "accuracy": 0.7924528301886793,
+      "precision_macro": 0.7933512688486926,
+      "recall_macro": 0.7934166666666667,
+      "f1_macro": 0.7928941361926661,
+      "miss_rate": 0.009790209790209791
+    },
+    "PCA + LDA + kNN": {
+      "accuracy": 0.720754716981132,
+      "precision_macro": 0.7205653414678013,
+      "recall_macro": 0.7220833333333333,
+      "f1_macro": 0.7199437957686194,
+      "miss_rate": 0.019580419580419582
+    },
+    "PCA + SVM": {
+      "accuracy": 0.8213836477987422,
+      "precision_macro": 0.8226948388484988,
+      "recall_macro": 0.8221666666666666,
+      "f1_macro": 0.8214484162274175,
+      "miss_rate": 0.013986013986013986
+    },
+    "LDA + SVM": {
+      "accuracy": 0.8075471698113208,
+      "precision_macro": 0.8066345266816548,
+      "recall_macro": 0.8083333333333333,
+      "f1_macro": 0.806820387953947,
+      "miss_rate": 0.015384615384615385
+    }
+  },
+  "train_time_s": 2.358659505844116,
+  "feature_ms_per_image": 57.738205482219826,
+  "predict_ms_per_image": 57.959279184666144,
+  "robustness": {
+    "gaussian_noise": {
+      "accuracy": 0.10062893081761007,
+      "precision_macro": 0.01008827238335435,
+      "recall_macro": 0.1,
+      "f1_macro": 0.018327605956471933,
+      "miss_rate": 0.9972027972027973
+    },
+    "blur": {
+      "accuracy": 0.10062893081761007,
+      "precision_macro": 0.10987012987012987,
+      "recall_macro": 0.1,
+      "f1_macro": 0.027406162464985995,
+      "miss_rate": 0.9706293706293706
+    },
+    "dark": {
+      "accuracy": 0.38742138364779877,
+      "precision_macro": 0.5547251131708926,
+      "recall_macro": 0.38508333333333333,
+      "f1_macro": 0.3686323772390413,
+      "miss_rate": 0.013986013986013986
+    },
+    "bright": {
+      "accuracy": 0.5886792452830188,
+      "precision_macro": 0.6864793918784675,
+      "recall_macro": 0.5899166666666668,
+      "f1_macro": 0.5657516192180684,
+      "miss_rate": 0.04895104895104895
+    }
+  },
+  "field": null
+}
